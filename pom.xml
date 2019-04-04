@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>info.rmapproject</groupId>
+	<artifactId>rmap-transform-api</artifactId>
+	<packaging>war</packaging>
+	<version>1.0.0-beta</version>
+	<name>RMap Project Transform Service</name>
+	<url>http://rmap-project.info</url>
+    <properties>
+		<org.springframework-version>4.1.6.RELEASE</org.springframework-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+	<dependencies>
+		<dependency>
+			<groupId>info.rmapproject</groupId>
+			<artifactId>rmap-core</artifactId>
+			<version>1.0.0-beta</version>
+		</dependency>
+		<dependency>
+			<groupId>info.rmapproject</groupId>
+			<artifactId>rmap-auth</artifactId>
+			<version>1.0.0-beta</version>	
+		</dependency>
+		<dependency>
+			<groupId>info.rmapproject</groupId>
+			<artifactId>rmap-transformer</artifactId>
+			<version>1.0.0-beta</version>
+		</dependency>
+	  	<dependency>
+	  		<groupId>commons-configuration</groupId>
+	  		<artifactId>commons-configuration</artifactId>
+	  		<version>1.10</version>
+	  	</dependency>
+		 <dependency>
+      		<groupId>junit</groupId>
+      		<artifactId>junit</artifactId>
+      		<version>4.11</version>
+      		<scope>test</scope>
+    	</dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+            <version>3.1.4</version>
+        </dependency>
+		
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>3.1.0</version>
+		</dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+		    <groupId>commons-httpclient</groupId>
+		    <artifactId>commons-httpclient</artifactId>
+		    <version>3.1</version>
+		</dependency>
+        <!-- logging -->
+	    <dependency>
+	      <groupId>ch.qos.logback</groupId>
+	      <artifactId>logback-classic</artifactId>
+	      <version>1.1.7</version>
+	    </dependency>
+      
+	</dependencies>
+	<build>
+		<finalName>rmap-transform-api-0.1</finalName>
+		<plugins>
+		    <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-compiler-plugin</artifactId>
+		        <version>2.4</version>
+		        <configuration>
+		            <source>1.8</source>
+		            <target>1.8</target>
+		        </configuration>
+		    </plugin>
+		<!--  temp -->
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-surefire-plugin</artifactId>
+	        <version>2.18.1</version>
+	        <configuration>
+	          <skipTests>true</skipTests>
+	        </configuration>
+	      </plugin>
+		<!--  end temp -->
+
+		</plugins>
+	</build>
+</project>
